@@ -19,13 +19,14 @@ const CartManager = () => {
     dispatch(cartActions.getTotalPrice());
   },[])
 
-  useEffect( () => {
-    return () => dispatch(cartActions.clear());
-  }, [] );
+//   useEffect( () => {
+//     return () => dispatch(cartActions.clear());
+//   }, [] );
   
     const orderHandler = (cartItems,totalPrice) => {
         dispatch(orderActions.add({cartItems,totalPrice}));
         navigate("/orders");
+        dispatch(cartActions.clear())
     } 
 
     const addQuantityHandler = (id) => {
