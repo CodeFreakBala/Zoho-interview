@@ -38,7 +38,7 @@ const OrderManager = () => {
             setSearchState(false);
             if(orderItems.length>0){
                 setLocalOrderState(orderItems.filter(order => { 
-                    return order.order_id === Number(orderNum)
+                    return order.order_id.toString().includes(orderNum);
                 }))
             }
         }
