@@ -1,0 +1,94 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+
+.icon{
+    margin-right: 1rem;
+}
+.alert_green{
+    background-color: #00ab41;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    padding: 0.1rem 0.3rem;
+}
+.content{
+    .item_name{
+        span{
+            font-size: 9px;
+        }
+    }
+    .availability{
+        .title{
+            font-size: 12px;
+            color: #626369;
+        }
+        margin: .5rem 0;
+    }
+    .price{
+        font-size: 12px;
+        color: #626369;
+    }
+    ul{
+        margin: 0;
+        padding-left: 0rem;
+        li{
+            text-transform: capitalize;
+            list-style: none;
+            font-size: 9px;
+            color: #626369;
+        }
+    }
+    button{
+        margin-top: .5rem;
+        cursor: pointer;
+    }
+}
+
+
+
+.select_qty{
+    display: flex;
+    align-items: center;
+    margin-top: .5rem;
+    cursor: pointer;
+    // visibility: hidden;
+    .qty_number{
+      margin: 0 0rem;
+      min-width: 25px;
+      text-align: center;
+      font-weight: 400;
+    }
+    .remove_qty, .add_qty{
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+        i{
+            font-size: 12px;
+        }
+    }
+    .remove_qty{
+      background: lightgray;
+      i{
+        &::before{
+          color: darkgray;
+        }
+      }
+    }
+    .add_qty{
+      background: #53c2f4;
+      i{
+        &::before{
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .btn_wrapper{
+    i{
+      margin-top: .5rem;
+      color: #626369;
+      cursor: pointer;
+    }
+  }

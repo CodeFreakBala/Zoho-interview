@@ -1,0 +1,38 @@
+.mb_1{
+    margin-bottom: 1rem;
+}
+
+.green{
+    color: #00ab41;
+}
+
+.order_manager{
+    .input_wrapper{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
+        align-items: center;
+        label{
+            font-size: 12px;
+            margin-right:.5rem;
+        }
+        input{
+            width: 30%;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            border: none;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            margin-left: 1rem;
+        }
+    }
+}
+
+
+.validation_message{
+    color: red;
+}
