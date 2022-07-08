@@ -14,27 +14,25 @@ const Header = () => {
     <header className={classes.header}>
       <h1>Restaurant</h1>
         <nav>
-            <div className={classes.toggle_wrap}>
-                 <ul>
-                    <li>
-                        <Link to="/" className={`${pathname === '/' ? classes.active : ''}`}>
-                            Menu
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/cart" className={`${pathname === '/cart' ? classes.active : ''}`}>
-                            <i className="fa fa-shopping-cart"></i> 
-                            <span>{cartItems.length}</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/orders" className={`${pathname === '/orders' ? classes.active : ''}`}>
-                            Orders
-                            <span>{orderItems.length}</span>
-                        </Link>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <Link to="/" className={`${pathname === '/' ? classes.active : ''}`}>
+                        Menu
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/cart" className={`${pathname === '/cart' ? classes.active : ''}`}>
+                        <i className="fa fa-shopping-cart"></i> 
+                        <span>{cartItems.length}</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/orders" className={`${pathname === '/orders' ? classes.active : ''}`}>
+                        Orders
+                        <span>{orderItems.length}</span>
+                    </Link>
+                </li>
+            </ul>
         </nav>
 
     </header>
