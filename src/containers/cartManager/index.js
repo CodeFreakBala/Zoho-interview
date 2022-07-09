@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import Card from '../../components/ui/card/Card'
 import { Link } from "react-router-dom";
 import classes from './CartManager.module.scss'
-import { foodActions } from '../../store/food';
 import { cartActions } from '../../store/cart';
 import { orderActions } from '../../store/order';
 import { useNavigate } from "react-router-dom";
@@ -15,14 +14,10 @@ const CartManager = () => {
     const cartItems =  useSelector((state) => state.cart.cartItems);
     const totalPrice =  useSelector((state) => state.cart.totalPrice); 
 
-  useEffect(()=> {
-    dispatch(cartActions.getTotalPrice());
-  },[])
+    useEffect(()=> {
+        dispatch(cartActions.getTotalPrice());
+    },[])
 
-//   useEffect( () => {
-//     return () => dispatch(cartActions.clear());
-//   }, [] );
-  
     const orderHandler = (cartItems,totalPrice) => {
         dispatch(orderActions.add({cartItems,totalPrice}));
         navigate("/orders");
@@ -58,8 +53,6 @@ const CartManager = () => {
                                         removeQuantity={removeQuantityHandler} 
                                         addQuantity={addQuantityHandler} 
                                         removeFromCart = {removeFromCartHandler}
-                                        // addToCart = {addToCartHander}
-                                        // removeFromCart = {removeFromCartHandler}
                                     />
                                 )
                             })

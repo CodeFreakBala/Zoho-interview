@@ -1,21 +1,15 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector} from 'react-redux';
 import Card from '../../components/ui/card/Card'
 import { Link } from "react-router-dom";
 import classes from './OrderManager.module.scss'
-import { orderActions } from '../../store/order';
-import { cartActions } from '../../store/cart';
-
 import OrderItem from '../../components/food/orderItem'
 import { useEffect, useState } from 'react';
 
 const OrderManager = () => {
-    const dispatch = useDispatch();
     const orderItems =  useSelector((state) => state.order.orderItems);
     const totalPrice =  useSelector((state) => state.cart.totalPrice); 
 
     const [localOrderState,setLocalOrderState] = useState([]);
-    const [searchState,setSearchState] = useState(true)
-    const [validation,setValidation] = useState(null);
 
     useEffect(()=>{
         setLocalOrderState(orderItems)
@@ -35,7 +29,6 @@ const OrderManager = () => {
             setLocalOrderState(orderItems)
         }
         else{
-            setSearchState(false);
             if(orderItems.length>0){
                 setLocalOrderState(orderItems.filter(order => { 
                     return order.order_id.toString().includes(orderNum);

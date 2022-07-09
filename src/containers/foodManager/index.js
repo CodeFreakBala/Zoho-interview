@@ -1,10 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { foodActions } from '../../store/food';
 import { cartActions } from '../../store/cart';
-import Card from '../../components/ui/card/Card'
 import FoodItem from '../../components/food/foodItem'
 import classes from './FoodManager.module.scss'
-import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 const FoodManager = () => {

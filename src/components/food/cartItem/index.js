@@ -1,8 +1,5 @@
-
-import { useState } from 'react';
 import classes from '../food.module.scss';
 import Card from '../../ui/card/Card'
-import { Link } from "react-router-dom";
 
 const CartItem = ({item,index,addQuantity,removeQuantity,removeFromCart}) => {
 
