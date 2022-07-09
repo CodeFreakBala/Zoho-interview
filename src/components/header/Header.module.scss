@@ -7,6 +7,9 @@
   background-color: #3c0080;
   color: white;
   padding: 0 10%;
+  position: sticky;
+  top: 0;
+  z-index: 9;
   @media(max-width:787px){
     flex-direction: column;
     padding-bottom: 2rem;
@@ -91,95 +94,3 @@
   color: #b864da !important;
 }
 
-
-.toggle_wrap{
-  display: inline-flex;
-  align-items: center;
-  font-weight: bold;
-  position: relative;
-    z-index: 0;
-  @media(max-width:767px){
-    position: relative;
-    margin-bottom:5px;
-    &::after{
-      content: " ";
-      position: absolute;
-      width: 333%;
-      height: 1px;
-      background-color: #efefef;
-      left: -16px;
-      bottom: -10px;
-    }
-  }
-
-
-  @media(max-width:992px){
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  cursor: pointer;
-  .toggle_btn_wrap{
-    display: flex;
-    border: 1px solid #2ca4f3;
-    border-radius: 25px;
-    overflow: hidden;
-    margin-left: 1rem;
-    @media(max-width:767px){
-    width: 193px;
-    }
-    @media(max-width:992px){
-      margin-left: 0rem;
-    }
-    a{
-      position: relative;
-      color: #afafaf !important;
-        &::after{
-          content: " ";
-          background: #4fa1d8;
-          border-radius: 25px;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          z-index: -1;
-          transition: 0.5s;
-
-        }
-        &.other_page{
-            &:hover{
-                color: #4fa1d8 !important;
-            }
-            &::after{
-                display: none;
-            }
-        }
-        &:nth-child(odd){
-            padding: 6px 1rem 6px 1rem;
-            &.active{
-                color: #fff !important;
-            &::after{
-                transform: translateX(0px) !important;
-            }
-        }
-       
-        &::after{
-          transform: translateX(122px);
-        }
-      }
-      &:nth-child(even){
-        padding: 6px 1rem 6px 1rem;
-        &.active{
-          color: #fff !important;
-          &::after{
-            transform: translateX(0px) !important;
-          }
-        }
-        &::after{
-          transform: translateX(-135px);
-        }
-      }
-    }
-  }
-}
